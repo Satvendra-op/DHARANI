@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>EcoSort - Transform Waste into Resources</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="dharani.png" alt="EcoSort Logo"> <!-- Placeholder for logo -->
+        </div>
+        <div class="mobile-nav-wrapper" id="mobile-nav-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="about.html" style=" font-family: Montserrat, sans-serif;">About Us</a></li>
+                </ul>
+            </nav>
+            <button class="get-started" onclick="window.location.href='/login.html'">Get Started</button>
+        </div>
+        <div class="hamburger-menu">
+            <img src="hamburger-icon.png" alt="Menu" id="hamburger-icon">
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content animate-on-scroll slide-up">
+                <span class="tagline">Smart Waste Management</span>
+                <h1>Transform Waste into <span class="highlight">Resources</span></h1>
+                <p>Revolutionary AI-powered waste segregation system that automatically sorts waste into recyclables,
+                    organics, and landfill materials. Reduce environmental impact by 75% while increasing recycling
+                    efficiency.</p>
+                <div class="hero-buttons">
+
+                </div>
+            </div>
+            <div class="hero-image animate-on-scroll fade-in">
+                <img src="image.webp" alt="AI waste sorting robots"> <!-- Placeholder for image -->
+                <div class="accuracy-badge">
+                    <img src="icons8-lightning-48.png" alt="Lightning icon"> <!-- Placeholder for icon -->
+                    <span>99.2% Accuracy</span>
+                    <small>AI Sorting Precision</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose-ecosort">
+            <h2 class="animate-on-scroll slide-up">Why Choose EcoSort?</h2>
+            <p class="subtitle animate-on-scroll slide-up">Our intelligent waste segregation system combines
+                cutting-edge AI with sustainable practices to revolutionize waste management.</p>
+
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll slide-up">
+                    <img src="icons8-brain-50.png" alt="AI Icon" class="feature-icon">
+                    <h3>AI-Powered Recognition</h3>
+                    <p>Advanced computer vision identifies and categorizes waste materials with 99.2% accuracy, learning
+                        and improving over time.</p>
+                </div>
+                <div class="feature-card animate-on-scroll slide-up">
+                    <img src="icons8-speed-48.png" alt="Analytics Icon" class="feature-icon">
+                    <h3>Real-Time Analytics</h3>
+                    <p>Monitor waste streams, track recycling rates, and optimize collection routes with comprehensive
+                        dashboard insights.</p>
+                </div>
+                <div class="feature-card animate-on-scroll slide-up">
+                    <img src="icons8-face-shield-64.png" alt="Prevention Icon" class="feature-icon">
+                    <h3>Contamination Prevention</h3>
+                    <p>Automated quality control prevents cross-contamination, ensuring higher value recyclable
+                        materials and cleaner streams.</p>
+                </div>
+                <div class="feature-card animate-on-scroll slide-up">
+                    <img src="icons8-profit-80.png" alt="Cost Icon" class="feature-icon">
+                    <h3>Cost Reduction</h3>
+                    <p>Reduce waste management costs by up to 40% through optimized sorting, reduced landfill fees, and
+                        increased recycling revenue.</p>
+                </div>
+                <div class="feature-card animate-on-scroll slide-up">
+                    <img src="icons8-smartphone-90.png" alt="Mobile Icon" class="feature-icon">
+                    <h3>Mobile Integration</h3>
+                    <p>Engage communities with mobile apps for waste education, pickup scheduling, and recycling rewards
+                        programs.</p>
+                </div>
+                <div class="feature-card animate-on-scroll slide-up">
+                    <img src="icons8-longitude-90.png" alt="Impact Icon" class="feature-icon">
+                    <h3>Environmental Impact</h3>
+                    <p>Measurable carbon footprint reduction with detailed environmental impact reporting and
+                        sustainability metrics.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="environmental-impact">
+            <h2 class="animate-on-scroll slide-up">Expected Environmental Impact</h2>
+            <p class="subtitle animate-on-scroll slide-up">See the measurable difference EcoSort makes in creating a
+                sustainable future for communities worldwide.</p>
+
+            <div class="impact-grid">
+                <div class="impact-card animate-on-scroll slide-up">
+                    <div class="icon-circle green"><img src="icons8-recycle-100.png" alt="Recycle Icon"></div>
+                    <h3 id="waste-diverted" data-target="75" data-suffix="%">0%</h3>
+                    <p>Waste Diverted from Landfills</p>
+                </div>
+                <div class="impact-card animate-on-scroll slide-up">
+                    <div class="icon-circle blue"><img src="icons8-leaf-100.png" alt="Leaf Icon"></div>
+                    <h3 id="co2-reduced" data-target="2.5" data-suffix="M">0M</h3>
+                    <p>Tons CO₂ Reduced Annually</p>
+                </div>
+                <div class="impact-card animate-on-scroll slide-up">
+                    <div class="icon-circle orange"><img src="icons8-drops-64.png" alt="Water Icon"></div>
+                    <h3 id="water-saved" data-target="1.8" data-suffix="B">0B</h3>
+                    <p>Gallons Water Saved</p>
+                </div>
+                <div class="impact-card animate-on-scroll slide-up">
+                    <div class="icon-circle green"><img src="icons8-tree-64.png" alt="Tree Icon"></div>
+                    <h3 id="trees-saved" data-target="500" data-suffix="K">0K</h3>
+                    <p>Trees Equivalent Saved</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2 class="animate-on-scroll slide-up">Most Expected Questions</h2>
+            <p class="subtitle animate-on-scroll slide-up">Everything you need to know about EcoSort's waste segregation
+                technology.</p>
+
+            <div class="faq-container">
+                <div class="faq-item animate-on-scroll slide-up">
+                    <div class="faq-question">
+                        <h3>How accurate is the AI sorting system?</h3>
+                        <span class="arrow-icon"><img src="icons8-down-arrow-90.png" alt="Arrow Down"></span>
+                        <!-- Down arrow -->
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our AI system achieves 99.2% accuracy in waste identification and sorting. The system
+                            continuously learns and improves through machine learning algorithms, adapting to new
+                            materials and local waste patterns.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll slide-up">
+                    <div class="faq-question">
+                        <h3>What types of waste can EcoSort handle?</h3>
+                        <span class="arrow-icon"><img src="icons8-down-arrow-90.png" alt="Arrow Down"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>EcoSort can process all common waste types including plastics, paper, cardboard, metals,
+                            glass, organic waste, and electronic components. The system can be customized for specific
+                            regional recycling requirements.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll slide-up">
+                    <div class="faq-question">
+                        <h3>How much space does the system require?</h3>
+                        <span class="arrow-icon"><img src="icons8-down-arrow-90.png" alt="Arrow Down"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The space requirements for the EcoSort system vary depending on the scale of operation. We
+                            offer modular solutions that can be customized to fit different facility sizes and
+                            capacities.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll slide-up">
+                    <div class="faq-question">
+                        <h3>What is the ROI timeline for EcoSort implementation?</h3>
+                        <span class="arrow-icon"><img src="icons8-down-arrow-90.png" alt="Arrow Down"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Customers typically see a significant return on investment (ROI) within 12-24 months,
+                            primarily due to increased recycling revenue, reduced landfill costs, and operational
+                            efficiencies.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll slide-up">
+                    <div class="faq-question">
+                        <h3>Do you provide training and support?</h3>
+                        <span class="arrow-icon"><img src="icons8-down-arrow-90.png" alt="Arrow Down"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide comprehensive training for your staff on operating and maintaining the
+                            EcoSort system, along with ongoing technical support to ensure smooth and efficient
+                            operation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="back-to-top" class="back-to-top hidden">
+        <img src="icons8-down-arrow-90.png" style="width: 20px; height: 20px; transform: rotate(180deg);"
+            alt="Up Arrow"> <!-- Up arrow icon -->
+    </button>
+
+    <hr style="border: 1px solid white; width: 80%;">
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="dharani.png" alt="EcoSort Logo">
+\
+
+
+     
+                </div>
+                <p>Transforming waste management through intelligent segregation technology for a sustainable future.
+                </p>
+                <div class="social-icons">
+                    <a href="https://x.com/" target="_blank"><img src="icons8-twitter-50.png" alt="Twitter"></a>
+                    <a href="https://in.linkedin.com/" target="_blank"><img src="icons8-in-90.png" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="icons8-f-96.png" alt="Facebook"></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 EcoSort. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

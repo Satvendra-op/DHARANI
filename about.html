@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>About Us - Dharani Snap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.08;
+            filter: blur(60px);
+            pointer-events: none;
+        }
+        .pastel-green-bg { background-color: #d4edda; }
+        .pastel-blue-bg { background-color: #d1ecf1; }
+        .pastel-purple-bg { background-color: #e2d9f3; }
+        .pastel-pink-bg { background-color: #f8d7da; }
+        .pastel-yellow-bg { background-color: #fff3cd; }
+        .pastel-orange-bg { background-color: #ffeaa7; }
+        
+        .team-member-card {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .team-member-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-member-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            background-color: #f3f4f6;
+            display: block;
+        }
+        
+        .team-member-card:hover .team-member-image {
+            transform: scale(1.1);
+        }
+        
+        /* Ensure images load properly */
+        .team-member-image[src=""],
+        .team-member-image:not([src]) {
+            opacity: 0;
+        }
+        
+        .team-member-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 100%);
+            padding: 2rem 1.5rem 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .team-member-card:hover .team-member-overlay {
+            transform: translateY(0);
+        }
+        
+        .team-member-info {
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease 0.2s;
+        }
+        
+        .team-member-card:hover .team-member-info {
+            opacity: 1;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-screen relative overflow-y-auto w-full">
+    <!-- Decorative background circles -->
+    <div class="decorative-circle pastel-green-bg w-96 h-96 -top-48 -left-48"></div>
+    <div class="decorative-circle pastel-purple-bg w-80 h-80 top-1/4 -right-32"></div>
+    <div class="decorative-circle pastel-blue-bg w-72 h-72 bottom-1/4 left-1/4"></div>
+    <div class="decorative-circle pastel-pink-bg w-64 h-64 top-1/2 right-1/4"></div>
+    
+    <!-- Header -->
+    <header class="w-full relative z-10 glass-effect border-b border-gray-200/50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-wrap justify-between items-center gap-3">
+            <a href="main.html" class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center shadow-lg">
+                    <span class="text-2xl">🌱</span>
+                </div>
+                <span class="text-2xl font-black text-gray-900">Dharani Snap</span>
+            </a>
+            <nav class="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
+                <a href="index.html" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Home</a>
+                <a href="about.html" class="text-gray-900 font-bold border-b-2 border-gray-900">About</a>
+                <a href="../public/login.html" class="bg-gray-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-800 transition-colors">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 pb-16">
+        <!-- Hero Section -->
+        <section class="text-center mb-16">
+            <div class="inline-block mb-4">
+                <span class="bg-gradient-to-r from-green-100 to-blue-100 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold">
+                    Our Team
+                </span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-black text-white mb-4">
+                Meet the <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Team</span>
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                Passionate individuals dedicated to building a sustainable future through innovative waste management solutions.
+            </p>
+        </section>
+
+        <!-- Team Grid -->
+        <section class="mb-12 sm:mb-20">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-member-card glass-effect rounded-3xl shadow-2xl overflow-hidden border border-gray-200/50 aspect-[3/4]">
+                    <div class="relative w-full h-full">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Team Member 1" class="team-member-image" 
+                             loading="lazy"
+                             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Alex+Johnson&size=400&background=1f2937&color=ffffff'">
+                        <div class="team-member-overlay">
+                            <div class="team-member-info">
+                                <h3 class="text-2xl font-black text-white mb-2">Alex Johnson</h3>
+                                <p class="text-lg font-semibold text-green-300 mb-1">CEO & Founder</p>
+                                <p class="text-sm text-gray-300">Leading the vision for sustainable waste management and eco-friendly solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member-card glass-effect rounded-3xl shadow-2xl overflow-hidden border border-gray-200/50 aspect-[3/4]">
+                    <div class="relative w-full h-full">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop" alt="Team Member 2" class="team-member-image"
+                             loading="lazy"
+                             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Sarah+Williams&size=400&background=1f2937&color=ffffff'">
+                        <div class="team-member-overlay">
+                            <div class="team-member-info">
+                                <h3 class="text-2xl font-black text-white mb-2">Sarah Williams</h3>
+                                <p class="text-lg font-semibold text-blue-300 mb-1">CTO & Co-Founder</p>
+                                <p class="text-sm text-gray-300">Driving innovation in AI-powered waste sorting and technology solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-member-card glass-effect rounded-3xl shadow-2xl overflow-hidden border border-gray-200/50 aspect-[3/4]">
+                    <div class="relative w-full h-full">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop" alt="Team Member 3" class="team-member-image"
+                             loading="lazy"
+                             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Michael+Chen&size=400&background=1f2937&color=ffffff'">
+                        <div class="team-member-overlay">
+                            <div class="team-member-info">
+                                <h3 class="text-2xl font-black text-white mb-2">Michael Chen</h3>
+                                <p class="text-lg font-semibold text-purple-300 mb-1">Head of Operations</p>
+                                <p class="text-sm text-gray-300">Managing daily operations and ensuring seamless service delivery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-member-card glass-effect rounded-3xl shadow-2xl overflow-hidden border border-gray-200/50 aspect-[3/4]">
+                    <div class="relative w-full h-full">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop" alt="Team Member 4" class="team-member-image"
+                             loading="lazy"
+                             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Emily+Rodriguez&size=400&background=1f2937&color=ffffff'">
+                        <div class="team-member-overlay">
+                            <div class="team-member-info">
+                                <h3 class="text-2xl font-black text-white mb-2">Emily Rodriguez</h3>
+                                <p class="text-lg font-semibold text-pink-300 mb-1">Head of Sustainability</p>
+                                <p class="text-sm text-gray-300">Championing environmental impact and sustainable business practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="glass-effect rounded-3xl shadow-2xl p-6 sm:p-12 mb-12 border border-gray-200/50">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-black text-gray-900 mb-6">Our Mission</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    At Dharani Snap, we're committed to revolutionizing waste management through innovative technology. 
+                    Our mission is to create a sustainable future where waste is transformed into valuable resources, 
+                    communities thrive, and our planet flourishes.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
+                    <div class="pastel-green rounded-2xl p-6 border-2 border-green-200">
+                        <h3 class="text-2xl font-black text-green-800 mb-2">🌱</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sustainability</h3>
+                        <p class="text-sm text-gray-700">Building a greener tomorrow</p>
+                    </div>
+                    <div class="pastel-blue rounded-2xl p-6 border-2 border-blue-200">
+                        <h3 class="text-2xl font-black text-blue-800 mb-2">💡</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Innovation</h3>
+                        <p class="text-sm text-gray-700">Technology-driven solutions</p>
+                    </div>
+                    <div class="pastel-purple rounded-2xl p-6 border-2 border-purple-200">
+                        <h3 class="text-2xl font-black text-purple-800 mb-2">🤝</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Community</h3>
+                        <p class="text-sm text-gray-700">Empowering local communities</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 glass-effect border-t border-gray-200/50 mt-20">
+        <div class="max-w-7xl mx-auto px-6 py-8">
+            <div class="text-center">
+                <p class="text-gray-600 text-sm">
+                    &copy; 2024 Dharani Snap. All rights reserved.
+                </p>
+                <div class="mt-4 flex justify-center gap-6">
+                    <a href="main.html" class="text-gray-600 hover:text-gray-900 text-sm">Home</a>
+                    <a href="about.html" class="text-gray-900 font-semibold text-sm">About</a>
+                    <a href="../public/login.html" class="text-gray-600 hover:text-gray-900 text-sm">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

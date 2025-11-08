@@ -1,0 +1,902 @@
+/* Basic Styles */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    /* Dark grey background */
+    color: #e0e0e0;
+    /* Light grey text */
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #222222;
+    border-bottom: 1px solid #333333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.get-started {
+    background-color: #4CAF50;
+    /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 50px;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.tagline {
+    background-color: #333333;
+    color: #888888;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 20px 0;
+    color: #ffffff;
+    /* White for main heading */
+}
+
+.hero h1 .highlight {
+    color: #4CAF50;
+    /* Green highlight */
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.hero-buttons .primary {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+}
+
+.hero-buttons .secondary {
+    background-color: transparent;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.accuracy-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #333333;
+    color: #e0e0e0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.accuracy-badge img {
+    height: 20px;
+}
+
+.accuracy-badge span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.accuracy-badge small {
+    display: block;
+    font-size: 12px;
+    color: #888888;
+}
+
+/* Why Choose EcoSort Section */
+.why-choose-ecosort {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #1a1a1a;
+    /* Dark grey background */
+}
+
+.why-choose-ecosort h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.why-choose-ecosort .subtitle {
+    font-size: 18px;
+    color: #b0b0b0;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: #222222;
+    /* Slightly lighter dark grey for cards */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card .feature-icon {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 16px;
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+.mobile-nav-wrapper {
+    display: flex;
+    /* Ensure it's a flex container for desktop */
+    align-items: center;
+}
+
+.hamburger-menu {
+    display: none;
+    /* Hidden by default on desktop */
+    cursor: pointer;
+}
+
+.hamburger-menu img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Environmental Impact Section */
+.environmental-impact {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #1a1a1a;
+    /* Dark grey background */
+    color: #e0e0e0;
+    /* Light grey text */
+}
+
+.environmental-impact h2 {
+    font-size: 36px;
+    color: #ffffff;
+    /* White heading */
+    margin-bottom: 20px;
+}
+
+.environmental-impact .subtitle {
+    font-size: 18px;
+    color: #b0b0b0;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.impact-card {
+    background-color: #222222;
+    /* Darker card background */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.impact-card .icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+
+.icon-circle.green {
+    background-color: #3a5c3a;
+    /* Darker green background */
+}
+
+.icon-circle.blue {
+    background-color: #3a4b5c;
+    /* Darker blue background */
+}
+
+.icon-circle.orange {
+    background-color: #5c4b3a;
+    /* Darker orange background */
+}
+
+.impact-card .icon-circle img {
+    height: 30px;
+}
+
+.impact-card h3 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    /* White text */
+    margin-bottom: 10px;
+}
+
+.impact-card p {
+    font-size: 16px;
+    color: #b0b0b0;
+}
+
+/* Responsive adjustments for environmental impact section */
+@media (max-width: 1024px) {
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .environmental-impact {
+        padding: 60px 20px;
+    }
+
+    .environmental-impact h2 {
+        font-size: 32px;
+    }
+
+    .environmental-impact .subtitle {
+        font-size: 16px;
+    }
+
+    .impact-card h3 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .environmental-impact h2 {
+        font-size: 28px;
+    }
+
+    .environmental-impact .subtitle {
+        font-size: 14px;
+    }
+
+    .impact-card h3 {
+        font-size: 24px;
+    }
+
+    .impact-card p {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    .accuracy-badge {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -20px;
+        background-color: #222222;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 870px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .mobile-nav-wrapper {
+        display: none;
+        flex-direction: column;
+        /* Ensure children stack vertically */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #222222;
+        border-top: 1px solid #333333;
+        padding: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-nav-wrapper.active {
+        display: flex;
+    }
+
+    .mobile-nav-wrapper nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        width: 100%;
+        /* Ensure ul takes full width */
+    }
+
+    .mobile-nav-wrapper nav ul li {
+        margin-right: 0;
+        padding: 10px 0;
+        /* Add padding to list items */
+    }
+
+    .mobile-nav-wrapper nav ul li a {
+        display: block;
+        /* Make links block level for full clickable area */
+        padding: 5px 0;
+    }
+
+    .mobile-nav-wrapper .get-started {
+        margin-top: 25px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-buttons .btn {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .why-choose-ecosort h2 {
+        font-size: 28px;
+    }
+
+    .why-choose-ecosort .subtitle {
+        font-size: 16px;
+    }
+
+    .feature-card h3 {
+        font-size: 20px;
+    }
+
+    .feature-card p {
+        font-size: 14px;
+    }
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #1a1a1a;
+    /* Dark grey background */
+    color: #e0e0e0;
+    /* Light grey text */
+}
+
+.faq-section h2 {
+    font-size: 36px;
+    color: #ffffff;
+    /* White heading */
+    margin-bottom: 20px;
+}
+
+.faq-section .subtitle {
+    font-size: 18px;
+    color: #b0b0b0;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #222222;
+    /* Darker card background */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    /* Ensures smooth height transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #333333;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.faq-question .arrow-icon {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.faq-question .arrow-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.faq-item.active .faq-question .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    /* Hidden by default */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    background-color: #1a1a1a;
+    /* Slightly darker for answer background */
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    /* Adjust as needed for content */
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.faq-answer p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #b0b0b0;
+}
+
+/* Responsive adjustments for FAQ section */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 60px 20px;
+    }
+
+    .faq-section h2 {
+        font-size: 32px;
+    }
+
+    .faq-section .subtitle {
+        font-size: 16px;
+    }
+
+    .faq-question h3 {
+        font-size: 16px;
+    }
+
+    .faq-answer p {
+        font-size: 14px;
+    }
+}
+
+/* Footer Section */
+footer {
+    background-color: #1a1a1a;
+    /* Consistent dark grey background */
+    color: #e0e0e0;
+    /* Light grey text */
+    padding: 50px 50px 20px 50px;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.footer-brand .logo {
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin-right: 15px;
+}
+
+.social-icons img {
+    height: 24px;
+    /* Adjust size of social icons */
+    filter: invert(70%);
+    /* Make icons lighter to fit dark theme */
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.link-column {
+    min-width: 120px;
+}
+
+.link-column h4 {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.link-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-column ul li {
+    margin-bottom: 10px;
+}
+
+.link-column ul li a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.link-column ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    border-top: 1px solid #444444;
+    /* Slightly lighter border for contrast */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.legal-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.2s ease;
+}
+
+.legal-links a:hover {
+    color: #ffffff;
+}
+
+/* Responsive adjustments for Footer section */
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 20px 15px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+        min-width: unset;
+    }
+
+    .social-icons {
+        margin-bottom: 30px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .link-column {
+        min-width: unset;
+    }
+
+    .link-column h4 {
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .legal-links {
+        margin-top: 10px;
+    }
+
+    .legal-links a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-brand .logo {
+        font-size: 20px;
+    }
+
+    .footer-brand p {
+        font-size: 13px;
+    }
+
+    .link-column h4 {
+        font-size: 15px;
+    }
+
+    .link-column ul li a,
+    .footer-bottom p,
+    .legal-links a {
+        font-size: 12px;
+    }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #222222;
+    /* Green theme color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    /* Hidden by default */
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive adjustments for Back to Top button */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+/* Scroll Animation Styles */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-on-scroll.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.animate-on-scroll.fade-in.is-visible {
+    opacity: 1;
+}
+
+.animate-on-scroll.slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.slide-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
