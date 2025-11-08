@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Dharani Snap - Buyer Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-gradient {
+            background-image: linear-gradient(to bottom right, #ffffff, #f9fafb);
+        }
+        .button-gradient {
+            background: linear-gradient(to right, #1f2937, #111827);
+        }
+        /* Pastel color scheme */
+        .pastel-green { background-color: #d4edda; color: #155724; }
+        .pastel-blue { background-color: #d1ecf1; color: #0c5460; }
+        .pastel-yellow { background-color: #fff3cd; color: #856404; }
+        .pastel-pink { background-color: #f8d7da; color: #721c24; }
+        .pastel-purple { background-color: #e2d9f3; color: #4a148c; }
+        .pastel-orange { background-color: #ffeaa7; color: #b8860b; }
+        
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.08;
+            filter: blur(60px);
+            pointer-events: none;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black flex flex-col items-center p-4 sm:p-8 min-h-screen relative overflow-y-auto w-full">
+    <!-- Decorative background circles -->
+    <div class="decorative-circle pastel-green w-96 h-96 -top-48 -left-48"></div>
+    <div class="decorative-circle pastel-purple w-80 h-80 top-1/4 -right-32"></div>
+    <div class="decorative-circle pastel-blue w-72 h-72 bottom-1/4 left-1/4"></div>
+    <div class="decorative-circle pastel-pink w-64 h-64 top-1/2 right-1/4"></div>
+    <header class="w-full max-w-5xl relative z-10 flex flex-wrap justify-between items-center gap-3 py-4 px-6 glass-effect rounded-3xl shadow-2xl mb-8 drop-shadow-md border border-gray-200/50">
+        <div class="flex items-center gap-4">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-900 shadow-lg">
+                <span class="text-2xl">🌱</span>
+            </div>
+            <div>
+                <h1 class="text-2xl sm:text-3xl font-black text-gray-900">My Eco Journey</h1>
+                <span id="buyer-name" class="hidden text-xs text-gray-500 font-medium"></span>
+            </div>
+        </div>
+        <div class="flex items-center space-x-2">
+            <button id="back-to-market" class="p-2 sm:p-3 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 transform hover:scale-110" title="Browse Marketplace">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="refresh-dashboard" class="p-2 sm:p-3 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 transform hover:scale-110" title="Refresh">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v6h6M20 20v-6h-6M5 19a9 9 0 0014-7h-3a6 6 0 11-6-6V3a9 9 0 00-5 16z" />
+                </svg>
+            </button>
+            <button id="logout-btn" class="p-2 sm:p-3 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 transform hover:scale-110" title="Logout">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="w-full max-w-6xl flex-1 space-y-6 relative z-10 pb-8">
+        <section class="glass-effect rounded-3xl shadow-2xl p-6 sm:p-10 border border-gray-200/50">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-6">
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 mb-2">Your Appointments</h2>
+                    <p class="text-gray-500 text-sm">Track every seller you've contacted and manage your eco-friendly purchases.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="bg-white rounded-2xl shadow-lg p-5 border-2 border-gray-200 hover:border-gray-300 hover:shadow-xl transition-all transform hover:scale-105">
+                    <p class="text-xs uppercase tracking-wide text-gray-500 mb-2 font-bold">Total Requests</p>
+                    <p id="stat-total" class="text-3xl font-black text-gray-900">0</p>
+                </div>
+                <div class="pastel-yellow rounded-2xl shadow-lg p-5 border-2 border-yellow-200 hover:border-yellow-300 hover:shadow-xl transition-all transform hover:scale-105">
+                    <p class="text-xs uppercase tracking-wide text-gray-600 mb-2 font-bold">Pending</p>
+                    <p id="stat-pending" class="text-3xl font-black" style="color: #856404;">0</p>
+                </div>
+                <div class="pastel-blue rounded-2xl shadow-lg p-5 border-2 border-blue-200 hover:border-blue-300 hover:shadow-xl transition-all transform hover:scale-105">
+                    <p class="text-xs uppercase tracking-wide text-gray-600 mb-2 font-bold">In Progress</p>
+                    <p id="stat-progress" class="text-3xl font-black" style="color: #0c5460;">0</p>
+                </div>
+                <div class="pastel-green rounded-2xl shadow-lg p-5 border-2 border-green-200 hover:border-green-300 hover:shadow-xl transition-all transform hover:scale-105">
+                    <p class="text-xs uppercase tracking-wide text-gray-600 mb-2 font-bold">Completed</p>
+                    <p id="stat-completed" class="text-3xl font-black" style="color: #155724;">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="appointments-container" class="space-y-4"></section>
+
+        <div id="appointments-empty" class="hidden glass-effect rounded-3xl shadow-2xl p-10 text-center border border-gray-200/50">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full pastel-green mb-4 shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 16.5a2.5 2.5 0 01-5 0v-6a2.5 2.5 0 015 0v6zM3 7a1 1 0 011-1h16a1 1 0 011 1v1a4 4 0 01-4 4H6a4 4 0 01-4-4V7z" />
+                </svg>
+            </div>
+            <h3 class="text-2xl font-black text-gray-900 mb-2">No appointments yet</h3>
+            <p class="text-gray-500 mb-6">Start exploring the marketplace to connect with eco-friendly sellers.</p>
+            <button id="explore-market" class="button-gradient text-white font-bold px-8 py-3 rounded-full shadow-lg hover:opacity-90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 transform hover:scale-105">Browse Marketplace</button>
+        </div>
+    </main>
+
+    <div id="modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/80 backdrop-blur-sm transition-opacity duration-300">
+        <div class="glass-effect rounded-2xl shadow-2xl w-full max-w-md p-6 transform transition-transform duration-300 scale-95 border border-gray-200/50">
+            <div class="flex justify-between items-center pb-3 border-b-2 border-gray-200 mb-4">
+                <h3 id="modal-title" class="text-2xl font-black text-gray-900"></h3>
+                <button id="modal-close-btn" class="text-gray-400 hover:text-gray-600 focus:outline-none transition-transform duration-200 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div id="modal-content" class="text-gray-700 leading-relaxed mb-6"></div>
+            <div id="modal-actions" class="flex justify-end space-x-3 mt-4"></div>
+        </div>
+    </div>
+
+    <script type="module" src="buyer-dashboard.js"></script>
+</body>
+</html>
+
+
