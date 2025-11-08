@@ -1015,7 +1015,7 @@ app.post('/api/nagarnigam/dump-requests/:requestId/approve', authenticate, async
 });
 
 app.get('/', (req, res) => {
-  res.redirect('/dharani/main.html');
+  res.redirect('/dharani/index.html');
 });
 
 // Initialize Nagar Nigam after all schemas are defined and MongoDB is connected
